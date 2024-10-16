@@ -570,7 +570,7 @@ body {
   z-index: 150;
   width: 0;
   opacity: 0;
-  transition: all 0.4s; }
+  transition: all 0.15s; }
 
 .navigation__list {
   position: absolute;
@@ -578,8 +578,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   list-style: none;
-  text-align: center;
-  width: 100%; }
+  text-align: center; }
 
 .navigation__item {
   margin: 1rem; }
@@ -596,7 +595,6 @@ body {
   background-size: 220%;
   transition: all 0.3s; }
   .navigation__link:link span, .navigation__link:visited span {
-    display: inline-block;
     margin-right: 1.5rem; }
 
 .navigation__link:hover, .navigation__link:active {

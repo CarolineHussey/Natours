@@ -32,7 +32,7 @@
     transition: transform 0.7s;
   }
 
-  //nav element
+  //nav container
   &__nav {
     height: 100vh;
     position: fixed;
@@ -41,18 +41,14 @@
     z-index: 150;
     width: 0;
     opacity: 0;
-    transition: all 0.4s;
+    transition: all 0.15s;
   }
 
   //navigation list
   &__list {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    @include centerHorizontalVertical;
     list-style: none;
     text-align: center;
-    width: 100%;
   }
 
   //navigation list item
@@ -82,12 +78,11 @@
 
       //Numbers
       span {
-        display: inline-block;
         margin-right: 1.5rem;
       }
     }
 
-    //navigation navigation list item states
+    //navigation list item states
     &:hover,
     &:active {
       background-position: 100%;
@@ -106,7 +101,7 @@
     width: 100%;
   }
 
-  //navigation icon - creates three horizontal lines - icon, before and after!
+  //navigation icon - creates hamburger menu icon - three horizontal lines - icon, before and after!
   &__icon {
     position: relative;
     margin-top: 3.5rem;
@@ -119,7 +114,6 @@
       display: inline-block;
     }
 
-    //set content to an empty string for the pseudo classes - they won't render without it.
     &::before,
     &::after {
       content: "";
