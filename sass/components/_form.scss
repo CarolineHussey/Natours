@@ -48,6 +48,11 @@
   &__radio-group {
     width: 45%;
     display: inline-block;
+
+    @include respond(tablet-P) {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
   }
 
   &__radio-input {

@@ -1,5 +1,5 @@
 .header {
-  height: 95vh;
+  height: 99vh;
   position: relative;
   background-image: linear-gradient(
       to right bottom,
@@ -10,6 +10,10 @@
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(tablet-L) {
+    clip-path: none;
+  }
 
   &__logo-box {
     position: absolute;

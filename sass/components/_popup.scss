@@ -20,12 +20,31 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all 0.4s 0.2s;
+
+    @include respond(tablet-P) {
+      background-image: linear-gradient(
+          to right,
+          rgba($color-white, 0.8) 0%,
+          rgba($color-white, 0.8) 100%
+        ),
+        url(../img/nat-8.jpg);
+      background-size: cover;
+    }
+
+    @include respond(tablet-L) {
+      width: 85%;
+    }
   }
 
   &__left {
     width: 33.333333%;
     display: table-cell;
     vertical-align: middle;
+
+    @include respond(tablet-P) {
+      width: 0%;
+      display: none;
+    }
   }
 
   &__right {
@@ -33,6 +52,13 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(tablet-L) {
+      padding: 3rem;
+    }
+    @include respond(tablet-P) {
+      padding: 3rem;
+    }
   }
 
   &__img {
@@ -42,10 +68,15 @@
 
   &__text {
     font-size: 1.4rem;
+    color: $color-grey-dark-3;
     column-count: 2;
     column-gap: 5rem;
     column-rule: 1px solid $color-grey-dark-2;
     hyphens: auto;
+
+    @include respond(tablet-P) {
+      column-count: 1;
+    }
   }
 
   &:target {

@@ -14,6 +14,16 @@
     box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
     text-align: center;
     cursor: pointer;
+
+    @include respond(tablet-P) {
+      top: 4rem;
+      right: 4rem;
+    }
+
+    @include respond(phone) {
+      top: 2rem;
+      right: 2rem;
+    }
   }
 
   //green background (with radial gradient)
@@ -30,6 +40,16 @@
     );
     z-index: 100;
     transition: transform 0.7s;
+
+    @include respond(tablet-P) {
+      top: 4.5rem;
+      right: 4.5rem;
+    }
+
+    @include respond(phone) {
+      top: 2.5rem;
+      right: 2.5rem;
+    }
   }
 
   //nav container
@@ -75,6 +95,13 @@
       );
       background-size: 220%;
       transition: all 0.3s;
+
+      @include respond(phone) {
+        background-size: 300%;
+        font-size: 2.25rem;
+        transition: all 0.8s;
+        padding: 0.75rem 0rem;
+      }
 
       //Numbers
       span {
@@ -133,10 +160,16 @@
   //creates the 'expanding icon' effect
   &__button:hover &__icon::before {
     top: -1rem;
+    @include respond(phone) {
+      top: -0.8rem;
+    }
   }
 
   &__button:hover &__icon::after {
     top: 1rem;
+    @include respond(phone) {
+      top: 0.8rem;
+    }
   }
 
   //transforms the hamburger icon into a cross icon
