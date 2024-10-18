@@ -35,3 +35,10 @@
     margin-bottom: 5rem !important;
   }
 }
+
+.u-padding-bottom-medium {
+  padding-bottom: 4rem !important;
+  @include respond(tablet-P) {
+    padding-bottom: 2rem !important;
+  }
+}

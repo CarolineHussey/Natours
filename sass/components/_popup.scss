@@ -4,11 +4,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba($color-black, 0.8);
+  background-color: rgba($color-black, 0.3);
   z-index: 300;
   visibility: hidden;
   opacity: 0;
   transition: all 0.2s;
+  backdrop-filter: blur(10px);
 
   &__content {
     width: 75%;
