@@ -121,6 +121,10 @@
   //functionality
   &__checkbox:checked ~ &__background {
     transform: scale(80);
+
+    @include respond(desktop-big) {
+      transform: scale(100);
+    }
   }
 
   &__checkbox:checked ~ &__nav {

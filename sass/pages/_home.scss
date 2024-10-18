@@ -17,13 +17,23 @@
       rgba($color-primary-light, 0.8),
       rgba($color-primary-dark, 0.8)
     ),
-    url(../img/nat-4.jpg);
+    url(../img/nat-4-large.jpg);
   background-size: cover;
 
   transform: skewY(-7deg);
 
   @include respond(phone) {
     transform: skewY(-15deg);
+  }
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 112.5em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/nat-4.jpg);
   }
 
   & > * {
@@ -64,8 +74,9 @@
   @include respond(tablet-P) {
     padding: 5rem 0 2rem;
   }
+
   @include respond(desktop-big) {
-    padding: 1.3rem 0;
+    padding: 0;
   }
 }
 
@@ -85,10 +96,21 @@
       rgba($color-white, 0.9) 50%,
       transparent 50%
     ),
-    url(../img/nat-10.jpg);
+    url(../img/nat-10-large.jpg);
   background-size: 100%;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em),
+    (min-width: 112.5em) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 45%,
+        transparent 70%
+      ),
+      url(../img/nat-10.jpg);
+  }
 
   @include respond(tablet-L) {
     background-image: linear-gradient(
@@ -97,7 +119,7 @@
         rgba($color-white, 0.9) 40%,
         transparent 65%
       ),
-      url(../img/nat-10.jpg);
+      url(../img/nat-10-large.jpg);
     width: 98%;
     margin: 0 auto;
     background-size: cover;
@@ -109,7 +131,7 @@
         rgba($color-white, 0.8) 0%,
         rgba($color-white, 0.8) 100%
       ),
-      url(../img/nat-10.jpg);
+      url(../img/nat-10-small.jpg);
     background-size: cover;
   }
 
